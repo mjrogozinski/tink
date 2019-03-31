@@ -29,3 +29,11 @@ list(APPEND TINK_INCLUDE_DIRS "${TINK_INCLUDE_ALIAS_DIR}")
 
 add_subdirectory(cc)
 add_subdirectory(proto)
+
+install(DIRECTORY ${TINK_INCLUDE_ALIAS_DIR}/
+    DESTINATION include
+    )
+
+install(DIRECTORY ${TINK_GENFILE_DIR}/
+    DESTINATION include/tink
+    )
